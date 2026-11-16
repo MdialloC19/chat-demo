@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import type { TtsVoice } from './api/speech.js'
 import { normalizeLocation, type UserLocation } from './location.js'
 
-export type Locale = 'zh-CN' | 'en-US'
+export type Locale = 'zh-CN' | 'en-US' | 'fr-FR'
 
 /** 主题偏好；默认跟随系统 */
 export type ThemePreference = 'light' | 'dark' | 'system'
@@ -56,10 +56,14 @@ export const isChineseBrowser = (): boolean =>
 
 const initialLocale = (): Locale => {
   const saved = read(KEYS.locale)
-  if (saved === 'zh-CN' || saved === 'en-US') {
+  if (saved === 'zh-CN' || saved === 'en-US' || saved === 'fr-FR') {
     return saved
   }
-  return isChineseBrowser() ? 'zh-CN' : 'en-US'
+  if (isChineseBrowser()) {
+    return 'zh-CN'
+  }
+  const language = (typeof navigator === 'undefined' ? '' : navigator.language).toLowerCase()
+  return language.startsWith('fr') ? 'fr-FR' : 'en-US'
 }
 
 const initialLocation = (): UserLocation | null => {

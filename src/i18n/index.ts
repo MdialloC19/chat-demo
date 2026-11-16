@@ -1,5 +1,6 @@
 import { useSettings } from '../services/settings.js'
 import { en } from './en.js'
+import { fr } from './fr.js'
 import { zh } from './zh.js'
 
 export type TranslationKey = keyof typeof zh
@@ -25,6 +26,7 @@ const createTranslate =
 const translators = {
   'zh-CN': createTranslate(zh),
   'en-US': createTranslate(en),
+  'fr-FR': createTranslate(fr),
 }
 
 /** 组件订阅语言变化；普通函数在调用时读取当前语言。 */
