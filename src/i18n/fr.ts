@@ -34,7 +34,7 @@ export const fr = {
   editMessage: 'Modifier le message',
   regenerate: 'Régénérer',
   continueGenerating: 'Continuer',
-  changeApiKey: "Changer de clé API",
+  changeApiKey: 'Changer de clé API',
   topUp: 'Recharger',
   messageSearchSummary: '1 page web',
   messageSearchSummaries: '{count} pages web',
@@ -50,7 +50,7 @@ export const fr = {
   mermaidSwitchLabel: 'Basculer entre le diagramme Mermaid et le code',
   toolSearchIntro: 'Recherche de',
   messageSearching: 'Recherche en cours...',
-  imageSearching: "Recherche par image...",
+  imageSearching: 'Recherche par image...',
   searchStopped: 'Recherche arrêtée',
   toolSearchFail: 'Recherche actuellement indisponible',
   toolSearchNoResult: 'Aucun résultat pertinent trouvé',
@@ -70,13 +70,12 @@ export const fr = {
   readingLink: 'Lecture en cours',
   commonNetworkErrorToast: 'Erreur réseau. Veuillez vérifier votre connexion.',
   replyInvalidApiKey:
-    "La clé API est invalide ou a été supprimée. Veuillez la remplacer et réessayer.",
+    'La clé API est invalide ou a été supprimée. Veuillez la remplacer et réessayer.',
   replyInsufficientBalance: 'Solde insuffisant. Veuillez recharger votre compte et réessayer.',
   replyRateLimited: 'Trop de requêtes. Veuillez réessayer plus tard.',
   completionServerBusyToast: 'Serveur occupé, veuillez réessayer plus tard.',
   unknownError: 'Erreur inconnue',
-  replyRefused:
-    "Désolé, cela dépasse mes capacités actuelles. Parlons d'autre chose.",
+  replyRefused: "Désolé, cela dépasse mes capacités actuelles. Parlons d'autre chose.",
   messageThinkDuration: 'A réfléchi pendant {count} seconde',
   messageThinkDurationPlural: 'A réfléchi pendant {count} secondes',
   messageThinkStopped: 'Arrêté',
@@ -84,12 +83,11 @@ export const fr = {
   groupTitleToolOpen: 'Navigation sur le web',
   messageThinking: 'Réflexion',
   backupInvalidJson: "Le fichier n'est pas un JSON valide.",
-  backupUnrecognized:
-    'Fichier non reconnu. Veuillez choisir un ZIP d\u2019historique DeepSeek.',
+  backupUnrecognized: "Fichier non reconnu. Veuillez choisir un ZIP d'historique DeepSeek.",
   backupNewerVersion:
     "Ce fichier utilise une version plus récente. Veuillez mettre à jour l'application avant l'importation.",
-  backupInvalidVersion: "La version du fichier est invalide et ne peut pas être importée.",
-  backupIncomplete: "Le fichier est incomplet et ne peut pas être importé.",
+  backupInvalidVersion: 'La version du fichier est invalide et ne peut pas être importée.',
+  backupIncomplete: 'Le fichier est incomplet et ne peut pas être importé.',
   backupInvalidBranches:
     'Les branches de messages de ce fichier sont corrompues et ne peuvent pas être importées.',
   backupInvalidFiles:
@@ -145,7 +143,8 @@ export const fr = {
   uploadFileStatusFailed: 'Échec du téléversement',
   uploadRetry: '{message}. Cliquez pour réessayer',
   chatInputPlaceholderChat: 'Saisir un message',
-  deactivatedThinkTooltip: 'Réfléchir avant de répondre pour résoudre les problèmes de raisonnement',
+  deactivatedThinkTooltip:
+    'Réfléchir avant de répondre pour résoudre les problèmes de raisonnement',
   thinkingSwitch: 'DeepThink',
   deactivatedSearchTooltip: 'Rechercher sur le web si nécessaire',
   search: 'Rechercher',
@@ -153,7 +152,7 @@ export const fr = {
   chatInputStopButtonTooltip: 'Arrêter',
   uploadMaxMBSize:
     'Le fichier dépasse la limite de taille ({size} Mo). Veuillez ajuster et réessayer.',
-  uploadMaxFiles: 'Vous pouvez téléverser jusqu\u2019à {count} fichiers',
+  uploadMaxFiles: "Vous pouvez téléverser jusqu'à {count} fichiers",
   uploadFileStatusUploading: 'Téléversement...',
   uploadServerBusy: 'Serveur occupé',
   uploadParseFailed: "Échec de l'analyse",
