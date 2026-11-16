@@ -169,4 +169,5 @@ export const zh = {
   latestReminderLanguage: '中文',
   settingsLocaleZhCN: '简体中文',
   settingsLocaleEnUS: 'English',
+  settingsLocaleFrFR: 'Français',
 } as const
