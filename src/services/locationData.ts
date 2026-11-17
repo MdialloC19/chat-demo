@@ -438,7 +438,9 @@ export const regionCodes: string[] =
 /**
  * 港澳台地区选项使用固定的中英文名称。
  */
-export const regionNameOverrides: Record<'zh-CN' | 'en-US', Record<string, string>> = {
+export const regionNameOverrides: Partial<
+  Record<'zh-CN' | 'en-US' | 'fr-FR', Record<string, string>>
+> = {
   'zh-CN': {
     TW: '中国台湾',
     HK: '中国香港',
