@@ -283,6 +283,7 @@ const LocaleSetting = () => {
           options={[
             { value: 'zh-CN', label: t('settingsLocaleZhCN'), lang: 'zh-CN' },
             { value: 'en-US', label: t('settingsLocaleEnUS'), lang: 'en' },
+            { value: 'fr-FR', label: t('settingsLocaleFrFR'), lang: 'fr' },
           ]}
           onChange={setLocale}
         />
