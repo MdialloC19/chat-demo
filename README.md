@@ -70,6 +70,24 @@ src/
   utils/               Shared utilities
 ```
 
+## Roadmap: local RAG and protected mode
+
+A planned privacy layer, per conversation, so that sensitive documents stay on the device and only selected, masked excerpts reach the API. Two independent settings:
+
+- **RAG: automatic (default) or off.** When automatic, the app uses indexed documents if the conversation has any; otherwise it sends the question directly, with nothing to enable.
+- **Protected mode: on or off.** It masks identifiers (emails, phones, names from a user-managed list) before anything is sent, and restores them locally in the streamed reply.
+
+| Protected | RAG | Route | What reaches the API |
+|---|---|---|---|
+| off | auto, no documents | `direct` | the conversation as-is (current behavior) |
+| off | auto, with documents | `rag` | question + retrieved excerpts, in clear |
+| on | auto, no documents | `protected` | the conversation, identifiers masked |
+| on | auto, with documents | `protected+rag` | question + excerpts, identifiers masked |
+
+The documents, embeddings index, identifier mapping table, and original files never leave the browser. This reduces exposure; it does not make data anonymous. Only a local generation model (e.g. Ollama) provides a "nothing leaves" guarantee.
+
+Planned milestones: (0) a single `prepareRequest()` pipeline in `src/services/privacy/` and `src/services/rag/` that every outgoing request goes through; (1) masking, stream de-anonymization, fail-closed behavior and persistence, no RAG yet; (2) local indexing (pdf.js, WASM embeddings, IndexedDB vectors) and citations; (3) quality: send preview, hybrid search, optional NER, browser compatibility.
+
 ## License
 
 [MIT](LICENSE). The build copies the license to `dist/LICENSE`; include it when distributing the app. Third-party dependencies are subject to their own licenses.
